@@ -16,7 +16,9 @@ It should be compatible with all versions of Node.js starting from v10
 ## Usage
 
 ```javascript
-var rcswitch = require('rcswitch'); // Might throw an error if wiring pi init failed, or exit process if no root (must work on that)
+const RCSwitch = require('rcswitch'); // Might throw an error if wiring pi init failed, or exit process if no root (must work on that)
+
+const rcswitch = new RCSwitch();
 
 rcswitch.enableTransmit(0); // Use data Pin 0
 rcswitch.switchOn("10110", 1); // Switch on the first unit of 10110 (code 1x23x) group
